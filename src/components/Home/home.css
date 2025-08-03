@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&family=Lobster&display=swap');
+
+/* New Modern Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.199);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.288);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.nav-brand h2 {
+    font-size: 3rem;
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-brand span {
+    background: linear-gradient(90deg, #494949, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.534);
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.863),-2px -2px 25px rgba(255, 255, 255, 0.863);
+    transition: 0.2s;
+    border: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-btn {
+    width: 106px;
+    height: 39px;
+    border-radius: 18px;
+    border-color: rgba(255, 255, 255, 0.568);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.signup-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.568);
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.bar.active:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.bar.active:nth-child(2) {
+    opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-brand h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav-container {
+        height: 60px;
+    }
+
+    .bar {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+/* Legacy styles for backward compatibility */
+.bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+.logo span {
+    background: linear-gradient(90deg, #494949, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    border-radius: 58px;
+    height: 70px;
+    padding: 0 10px;
+}
+
+.tools ul {
+    padding: 0px 40px;
+}
+
+.tools a {
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 18px;
+}
+
+.tools a:hover,
+.active {
+    background: rgba(0, 0, 0, 0.747); /* شفافية أقل */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.863),
+                -2px -2px 25px rgba(255, 255, 255, 0.863);
+    transition: 0.2s;
+    border: 0;
+}
+
+
+
+.bar-btn {
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar-btn button {
+    width: 106px;
+    height: 39px;
+    border-radius: 18px;
+    border-color: rgba(255, 255, 255, 0.568);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.loginbtn{
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.bar-btn button:hover {
+    background-color: rgba(255, 255, 255, 0.521);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.info-container {
+    height: 554px;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-right {
+    width: 100%;
+    height: 554px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-size: cover;
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 5px 5px 10px black;
+    opacity: 1;
+}
+
+.info-right.fade-out {
+    opacity: 0;
+}
+
+.info-right h1 {
+    position: absolute;
+    margin-top: 6px;
+    top: 0;
+    left: 30px;
+    font-size: 40px;
+}
+
+.info-right p {
+    width: 70%;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    font-size: 19px;
+}
+
+.info-right button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.26);
+    position: absolute;
+    bottom: 39px;
+    right: 30px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.info-right button:hover {
+    background-color: rgba(255, 255, 255, 0.452);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .bar-container {
+        width: 95%;
+        padding: 0 0;
+        position: relative;
+    }
+    
+    .info-container {
+        width: 95%;
+    }
+    
+    .info-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bar-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .tools {
+        order: 2;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .bar-btn {
+        order: 3;
+        width: auto;
+        gap: 1rem;
+    }
+    
+    .info-container {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+    }
+    
+    .info-left {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .info-right {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .info-right h1 {
+        font-size: 32px;
+    }
+    
+    .info-right p {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bar-container {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .tools {
+        padding: 0 5px;
+    }
+    
+    .tools ul {
+        padding: 0px 15px;
+    }
+    
+    .tools a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    .bar-btn button {
+        width: 80px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .info-right {
+        height: 300px;
+    }
+    
+    .info-right h1 {
+        font-size: 24px;
+        left: 15px;
+    }
+    
+    .info-right p {
+        width: 85%;
+        left: 15px;
+        font-size: 14px;
+    }
+    
+    .info-right button {
+        padding: 8px 16px;
+        font-size: 16px;
+        right: 15px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bar-container {
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .tools {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .tools ul {
+        padding: 0px 8px;
+    }
+    
+    .tools a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    
+    .bar-btn {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .bar-btn button {
+        width: 70px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .info-right {
+        height: 250px;
+    }
+    
+    .info-right h1 {
+        font-size: 20px;
+        left: 10px;
+    }
+    
+    .info-right p {
+        width: 90%;
+        left: 10px;
+        font-size: 12px;
+    }
+    
+    .info-right button {
+        padding: 6px 12px;
+        font-size: 14px;
+        right: 10px;
+        bottom: 15px;
+    }
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 55px;
+    }
+}
