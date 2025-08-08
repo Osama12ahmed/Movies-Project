@@ -12,20 +12,6 @@ export default function Footer() {
                     <p className="brand-description">
                         Your ultimate gateway to the world of cinema. Discover, explore, and enjoy the magic of movies.
                     </p>
-                    <div className="social-icons">
-                        <Link to="#" className="social-icon" aria-label="Facebook">
-                            <i className="f"></i>
-                        </Link>
-                        <Link to="#" className="social-icon" aria-label="Twitter">
-                            <i className=""></i>
-                        </Link>
-                        <Link to="#" className="social-icon" aria-label="Instagram">
-                            <i className=""></i>
-                        </Link>
-                        <Link to="#" className="social-icon" aria-label="LinkedIn">
-                            <i className=""></i>
-                        </Link>
-                    </div>
                 </div>
 
                 <div className="footer-links">

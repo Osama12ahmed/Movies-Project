@@ -9,41 +9,18 @@
 
 .login-container,
 .signup-container {
-  background-color: rgba(0, 0, 0, 0.719);
-  height: 590px;
-  width: 85%;
-  display: flex;
-  border-radius: 10px;
-  margin: 2rem auto;
-}
-
-.left {
-  border-radius: 10px;
-  padding: 0 15px;
-  width: 50%;
+  background: linear-gradient(135deg, #3535358e 0%, #6b6b6b71 100%);
+  padding: 2rem;
+  border-radius: 26px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-size: cover;
-  background-image: url(/src/assets/ChatGPT\ Image\ Jul\ 14\,\ 2025\,\ 01_35_53\ AM.png);
-  box-shadow: inset -15px 0 14px rgba(0, 0, 0, 0.904);
-  justify-content: space-between;
-}
-
-.left span {
-  font-size: 35px;
-  color: rgb(189, 2, 2);
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.637);
-}
-
-.left p {
-  font-size: 19px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.63);
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .right {
-  width: 45%;
+  width: 100%;
   padding: 0 15px;
   height: 100%;
   display: flex;
@@ -64,16 +41,15 @@
 }
 
 .right input {
-  margin-top: 50px;
-  width: 95%;
-  height: 35px;
-  padding-left: 8px;
-  border-radius: 9px;
-  border-color: transparent;
-  margin-top: 5px;
-  font-size: 16px;
+  width: 90%;
+  padding: 15px 10px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.644);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn {
@@ -311,4 +287,23 @@
     width: 50%;
     padding: 1rem;
   }
+}
+
+.homeLink{
+  margin: auto;
+  margin-top: 20px;
+  background-color: rgba(224, 224, 224, 0.205);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px; 
+  transition: 0.2s;
+}
+
+.homeLink:hover{
+  background-color: #ffffff60;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.315);
+  color: rgba(0, 0, 0, 0.76);
 }

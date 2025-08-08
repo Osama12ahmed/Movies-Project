@@ -26,7 +26,6 @@
     z-index: 1;
 }
 
-/* Brand Section */
 .footer-brand {
     display: flex;
     flex-direction: column;
@@ -48,34 +47,6 @@
     line-height: 1.6;
     font-size: 1rem;
     margin: 0;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.social-icon:hover {
-    background: linear-gradient(135deg, #dbdbdb, #cecece);
-    color: #000000;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(212, 212, 212, 0.3);
 }
 
 /* Links Section */
@@ -259,15 +230,24 @@
         gap: 2rem;
         padding: 3rem 2rem 2rem;
     }
+
+    .link-section{
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {
+    .footer{
+        width: 100%;
+    }
+
     .footer-top {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
+        
     }
-    
+
     .footer-links {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
@@ -347,12 +327,8 @@
         height: 35px;
     }
     
-    .link-section h3 {
-        font-size: 1.1rem;
-    }
-    
-    .link-section a {
-        font-size: 0.9rem;
+    .link-section{
+        display: none;
     }
     
     .footer-newsletter h3 {

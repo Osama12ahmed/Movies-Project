@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function Login() {
 
@@ -42,30 +42,21 @@ export default function Login() {
 
     return (
         <div className="login-container">
-            <div className="left">
-                <h1>Welcome <span>Back</span></h1>
-                <p> Your ultimate gateway to the world of movies.
-                    Discover thousands of titles across every genre, old and new.
-                    Dive into your favorite stories or find something completely fresh.
-                    Sit back, relax, and enjoy endless entertainment anytime, anywhere.</p>
-            </div>
             <form onSubmit={handleSubmit} className="right">
                 <h1>Login</h1>
                 <div className="email-input">
-                    <label htmlFor="">Email</label>
                     <input type="email" onBlur={() => handleInputBlur('email')} placeholder="Email" onChange={(event) => handleChangeInput('email', event.target.value)} value={inputValues.email} />
                     {emailIsInvalid ?  <p className="error">Pleas enter a valid email address</p> : ''}
-
                 </div>
                 <div className="password-input">
-                    <label htmlFor="">Password</label>
-                    <input type="password" onBlur={() => handleInputBlur('password')}  onChange={(event) => handleChangeInput('password', event.target.value)} value={inputValues.password} />
+                    <input type="password" placeholder="Password" onBlur={() => handleInputBlur('password')}  onChange={(event) => handleChangeInput('password', event.target.value)} value={inputValues.password} />
                     {passwordIsInvalid && <p className="error">Pleas make your password more than 6 characters </p>}
                 </div>
                 <div className="btn">
                     <button className="login-btn">Login</button>
                     <button onClick={handleNavigationSignup} className="sginup-btn">Sgin up</button>
                 </div>
+                <Link className="homeLink" to='/'>Complete as a visitor</Link>
             </form>
         </div>
     )

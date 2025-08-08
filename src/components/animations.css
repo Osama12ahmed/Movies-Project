@@ -163,7 +163,7 @@
 }
 
 .hover-glow:hover {
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 15px rgba(170, 170, 170, 0.6);
 }
 
 /* Staggered Animations */

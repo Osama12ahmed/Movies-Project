@@ -1,11 +1,8 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function Signup() {
-    const [name, setName] = useState({
-        first: 'Unkown',
-        last: ''
-    })
+
     const [inputValues, setInputValues] = useState({
         email: '',
         password: ''
@@ -38,22 +35,9 @@ export default function Signup() {
         }))
     }
 
-    function handleChangeName(indentifer, value) {
-        setName(prevName => ({
-            ...prevName,
-            [indentifer]: value
-        }))
-    }
-
     return (
         <div className="signup-container">
-            <div className="left">
-                <h1>Welcome <span>{name.first} {name.last}</span></h1>
-                <p> Your ultimate gateway to the world of movies.
-                    Discover thousands of titles across every genre, old and new.
-                    Dive into your favorite stories or find something completely fresh.
-                    Sit back, relax, and enjoy endless entertainment anytime, anywhere.</p>
-            </div>
+
             <form className="right">
                 <h1>Sign Up</h1>
                 <div className="user-info">
@@ -73,6 +57,7 @@ export default function Signup() {
                     <button onClick={handleNavigationLogin} className="login-btn">Login</button>
                     <button type="submit" className="sginup-btn">Sgin up</button>
                 </div>
+                <Link className="homeLink" to='/'>Complete as a visitor</Link>
             </form>
         </div>
     )

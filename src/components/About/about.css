@@ -82,3 +82,25 @@
     -webkit-text-fill-color: transparent;
     font-weight: 500;
 }
+
+@media (max-width: 768px) {
+    .welcome{
+        font-size: 49px;
+        margin: 100px 0;
+    }
+
+.slide {
+    width: 380px;
+    margin-right: 15px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.slide2 {
+    width: 300px;
+    margin-top: 25px;
+    margin-right: 15px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+}
